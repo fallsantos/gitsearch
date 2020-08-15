@@ -70,6 +70,7 @@ export default function MoreDetails(props) {
             <a
               href={`https://github.com/${u.login}/${repository.name}`}
               key={repository.id}
+              target="_blank"
             >
               {repository.name}
             </a>
