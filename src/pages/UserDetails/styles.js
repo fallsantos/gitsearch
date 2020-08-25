@@ -45,8 +45,9 @@ export const Loading = styled.div`
 `;
 
 export const Owner = styled.div`
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  text-align: center;
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   margin-top: 20px;
@@ -83,6 +84,7 @@ export const Owner = styled.div`
     padding: 10px;
     border-radius: 10px;
     transition: background 1s;
+    margin: auto;
   }
 
   div a:hover {
