@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { FaFolder, FaGithub, FaSpinner } from 'react-icons/fa';
+import { FaFolder, FaGithub } from 'react-icons/fa';
 
 import api from '../../services/api';
 
@@ -66,14 +66,11 @@ export default function MoreDetails(props) {
       <RepoList>
         {r.map((repository) => (
           <div>
-            <FaFolder color="#33B5FF" size={20} />
-            <a
-              href={`https://github.com/${u.login}/${repository.name}`}
-              key={repository.id}
-              target="_blank"
-            >
-              {repository.name}
-            </a>
+            <div className="repo">
+              <FaFolder color="#33B5FF" size={30} />
+              <p>{repository.name}</p>
+            </div>
+            <Link to={`/repository/${repository.name}/issues`}>Issues</Link>
           </div>
         ))}
       </RepoList>

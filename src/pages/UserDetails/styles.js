@@ -31,7 +31,7 @@ export const ContentDetails = styled.div`
 `;
 
 export const Loading = styled.div`
-  color: #fff;
+  color: blue;
   font-size: 18px;
   font-weight: bold;
   display: flex;
@@ -79,7 +79,7 @@ export const Owner = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1c1c1c;
+    background: #181818;
     width: 150px;
     padding: 10px;
     border-radius: 10px;
@@ -88,27 +88,57 @@ export const Owner = styled.div`
   }
 
   div a:hover {
-    background: #0000ff;
+    background: #363636;
   }
 `;
 
 export const RepoList = styled.div`
   margin-top: 10px;
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 
   div {
     display: flex;
-    margin-top: 10px;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  div .repo {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    padding: 0;
+    /*margin-top: 10px;*/
     align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+  div .repo p {
+    margin-left: 10px;
   }
 
   div a {
-    margin-left: 10px;
-    transition: font-size 0.5s;
+    background: #807f7f;
+    /*border: 1px solid red;*/
+    color: #fff;
+    padding: 5px 10px;
+    right: 0;
+    border-radius: 5px;
+    align-self: flex-end;
+    transition: background 1s;
+    font-size: 15px;
   }
 
   div a:hover {
-    font-size: 15px;
+    /*padding: 10px;*/
+    background: #363636;
   }
 `;
