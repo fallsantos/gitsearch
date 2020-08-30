@@ -12,7 +12,7 @@ export const Title = styled.h1`
 `;
 
 export const User = styled.div`
-  border: 1px solid #7159c1;
+  border: 1px solid #ddd;
   border-radius: 4px;
   padding: 10px;
   margin-top: 10px;
