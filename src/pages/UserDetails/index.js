@@ -70,7 +70,12 @@ export default function MoreDetails(props) {
               <FaFolder color="#33B5FF" size={30} />
               <p>{repository.name}</p>
             </div>
-            <Link to={`/repository/${repository.name}/issues`}>Issues</Link>
+            <a
+              href={`https://github.com/${u.login}/${repository.name}`}
+              target="_blank"
+            >
+              <FaGithub color="#fff" size={20} />
+            </a>
           </div>
         ))}
       </RepoList>
